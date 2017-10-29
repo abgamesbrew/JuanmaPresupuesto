@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+// LOS SERVLETS SON CLASES POR LO TANTO SU NOMBRE TIENE QUE COMENZAR POR MAYÚSCULAS
 /**
  *
  * @author shirone

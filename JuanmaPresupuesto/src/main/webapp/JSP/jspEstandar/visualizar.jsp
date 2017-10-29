@@ -31,6 +31,9 @@
         <%@ include file="../../INCLUDES/cabecera.inc" %>
         <h1>Ya hemos terminado!</h1>
         <h3>Esperamos que los precios sean de su agrado</h3>
+<%-- MUY MALA COMPOSICIÓN DE LOS IF 
+     NO VISUALIZAS LOS DATOS ELEGIDOS POR EL USUARIO
+--%>
         <table>
             <% if(sesion.getAttribute("edificio") != null && sesion.getAttribute("contenido") != null){
             //** comprobamos si se marcaron en el index los dos seguros **//%>

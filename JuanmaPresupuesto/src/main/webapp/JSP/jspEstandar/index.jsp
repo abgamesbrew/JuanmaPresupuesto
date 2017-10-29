@@ -17,6 +17,7 @@
         <h1> ¡ Elija su seguro !</h1>
         <h2>Por favor, elegir seguro de los edificios, seguro de contenido, o ambos, marcando las casillas de abajo.</h2>
         <p>¿Que tipo de seguro quiere?</p>
+        <%-- HAY QUE SELECCIONAR LAS DOS OPCIONES POR DEFECTO --%>
         <form method="post" action="eleccion">
             <input type="checkbox" name="edificios"/><label>Seguro de edificios</label><br><br>
             <input type="checkbox" name="contenido"/><label>Seguro de contenido</label><br><br>
