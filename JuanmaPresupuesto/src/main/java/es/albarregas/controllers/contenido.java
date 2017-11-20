@@ -58,7 +58,9 @@ public class contenido extends HttpServlet {
            sesion.setAttribute("total", calculado.getTotal());
            sesion.setAttribute("totalcontenido", calculado.getContenidoCalculado());
         }
-        request.getRequestDispatcher("JSP/jspEstandar/visualizar.jsp").forward(request, response);
+        
+        sesion.setAttribute("fin", "fin");
+        request.getRequestDispatcher("JSP/jsp"+(String)sesion.getAttribute("complementocarpeta")+"/visualizar"+(String)sesion.getAttribute("complemento")+".jsp").forward(request, response);
         
     } catch (IllegalAccessException ex) {
         Logger.getLogger(contenido.class.getName()).log(Level.SEVERE, null, ex);

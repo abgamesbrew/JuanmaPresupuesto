@@ -19,6 +19,7 @@ and open the template in the editor.
 }
 
 #contenido{
+    float:left;
     width:98%;
     height: 80%;
     text-align: center;
@@ -27,7 +28,7 @@ and open the template in the editor.
 }
 
 #contenido table{
-    margin: auto;
+    margin:auto;
     color: blue;
 }
 
@@ -40,4 +41,32 @@ and open the template in the editor.
 
 .eslogan{
     width:30%;
+}
+
+#derecha{
+    width: 30%;
+    font-size: 1.5vw;
+    padding:1%;
+    float:right;
+}
+
+#derecha table{
+  color:black;
+}
+
+#derecha table span{
+  color:blue;
+}
+
+#izquierda{
+  width: 30%;
+    font-size: 1.5vw;
+    padding:1%;
+    float:left;
+}
+
+#izquierda table{
+  margin-top: 5%;
+  border:1px solid black;
+  color:black;
 }

@@ -5,11 +5,13 @@
  */
 package es.albarregas.pojos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author shirone
  */
-public class Contenido {
+public class Contenido implements Serializable {
     private boolean danios=false;
     private double cantidadAsegurada;
     private double franquicia;

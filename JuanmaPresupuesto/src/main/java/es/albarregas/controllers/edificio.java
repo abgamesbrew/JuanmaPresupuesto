@@ -36,6 +36,8 @@ public class edificio extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+            String url="";
+        
         try {
             //** rellenamos la clase edificio con los valores del formulario **//
             Map<String,String[]> parametros = request.getParameterMap();
@@ -55,17 +57,18 @@ public class edificio extends HttpServlet {
             sesion.setAttribute("calcularcuota", calcular);
             
             if(eleccion.getContenido()){//** si en la elección escogimos el seguro de contenido iremos al jsp de contenido cargando en el request una bandera**//
-                request.getRequestDispatcher("JSP/jspEstandar/contenido.jsp").forward(request, response);
+                url="JSP/jsp"+(String)sesion.getAttribute("complementocarpeta")+"/contenido"+(String)sesion.getAttribute("complemento")+".jsp";
                 
             }else{//** si no hay seguro de contenido elegido, calculamos la cuota del edificio, la añadimos a la sesion y vamos a la página que lo mostrará **//
                 sesion.setAttribute("total", calcular.getTotal());
-                request.getRequestDispatcher("JSP/jspEstandar/visualizar.jsp").forward(request, response);
+                url="JSP/jsp"+(String)sesion.getAttribute("complementocarpeta")+"/visualizar"+(String)sesion.getAttribute("complemento")+".jsp";
             }
         } catch (IllegalAccessException ex) {
             Logger.getLogger(edificio.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvocationTargetException ex) {
             Logger.getLogger(edificio.class.getName()).log(Level.SEVERE, null, ex);
         }
+        request.getRequestDispatcher(url).forward(request, response);
     }
     @Override
     public String getServletInfo() {

@@ -5,11 +5,13 @@
  */
 package es.albarregas.pojos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author shirone
  */
-public class Eleccion {
+public class Eleccion implements Serializable {
     private boolean edificio=false;
     private boolean contenido=false;
     

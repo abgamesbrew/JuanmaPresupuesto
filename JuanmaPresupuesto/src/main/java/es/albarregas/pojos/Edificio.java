@@ -5,11 +5,13 @@
  */
 package es.albarregas.pojos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author shirone
  */
-public class Edificio {
+public class Edificio implements Serializable {
    private String tipoEdificio;
    private int numHab;
    private  int anioConstruccion;
