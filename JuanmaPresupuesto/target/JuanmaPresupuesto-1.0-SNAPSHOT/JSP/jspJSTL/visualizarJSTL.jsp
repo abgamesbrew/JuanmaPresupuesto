@@ -68,7 +68,7 @@
                     </c:when>
                 </c:choose>
             </table>
-        <input type="button" onclick=" location.href='<%= request.getContextPath() %>/index.html' " value="Volver al inicio" name="boton" /> 
+        <input type="button" onclick=" location.href='${pageContext.request.contextPath}/index.html' " value="Volver al inicio" name="boton" /> 
         </div>
         <div id="izquierda">
             <p><strong><ins>Tus elecciones</ins></strong></p>
