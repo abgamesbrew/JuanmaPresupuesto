@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<jsp:root   xmlns:jsp="http://java.sun.com/JSP/Page"
+            xmlns:c="http://java.sun.com/jsp/jstl/core"
+            version="2.1">
+    <jsp:directive.page contentType="text/html; charset=UTF-8" />
+    <jsp:directive.page isELIgnored="false" />
+    <jsp:output omit-xml-declaration="false"
+                doctype-root-element="html"
+                doctype-public="-//W3C//DTD XHTML 1.1//EN"
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd" />
+    <c:set var="contexto" value="${pageContext.request.contextPath}" />
+    <html>
+        <head>
+            <title>Seguros JSPX</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <link rel="stylesheet" href="${contexto}/CSS/conjunto.css"/>
+        </head>
+        <body>
+            <div id="cabecera">
+                <img src="${contexto}/IMG/seguros.png" />
+                <div id="eslogan">
+                    <img class="eslogan" src="${contexto}/IMG/eslogan.png" />
+                </div>
+            </div>
+            <div id="contenido">
+            <h1> ¡ Elija su seguro !</h1>
+            <h2>Por favor, elegir seguro de los edificios, seguro de contenido, o ambos, marcando las casillas de abajo.</h2>
+            <p>¿Que tipo de seguro quiere?</p>
+            <form method="post" action="${contexto}/eleccion">
+                <input type="checkbox" name="edificios" checked="checked"/><label>Seguro de edificios</label><br/><br/>
+                <input type="checkbox" name="contenido" checked="checked"/><label>Seguro de contenido</label><br/><br/>
+                <input type="hidden" name="jspx" value="jspx"/>
+                <input type="submit" value="Enviar"/>
+            </form>  
+            </div>
+        </body>
+    </html>
+</jsp:root>

@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CSS/conjunto.css"/>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/conjunto.css"/>
         <title>Contenido JSTL</title>
     </head>
     <body>

@@ -6,9 +6,9 @@ and open the template in the editor.
 -->
 
 <div id="cabecera">
-    <img src="IMG/seguros.png" />
+    <img src="<%= request.getContextPath()%>/IMG/seguros.png" />
     <div id="eslogan">
-        <img class="eslogan" src="IMG/eslogan.png" />
+        <img class="eslogan" src="<%= request.getContextPath()%>/IMG/eslogan.png" />
     </div>
 </div>
         <div id="contenido">
